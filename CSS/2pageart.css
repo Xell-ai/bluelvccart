@@ -1,0 +1,1063 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    /*colors*/
+    --white-color: #ffffff;
+    --dark-color:#252525;
+    --primary-color: #3B141C;
+    --secondary-color: #f3961c;
+    --light-pink-color:#fa45;
+    --medium-gray-color: #ccc;
+
+    /*font-sizes*/
+    --font-size-s:0.9rem;
+    --font-size-n:1rem;
+    --font-size-m:1.12rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:2.3rem;
+
+    /* font-weight */
+    --font-waight-normal:400;
+    --font-waight-medium:500;
+    --font-waight-semibold:600;
+    --font-waight-bold:700;
+
+    /*border-radius*/
+    --border-radius-s:8px;
+    --border-radius-m:50px;
+    --border-radius-circle:50%;
+
+    /*site mx-width*/
+    --site-max-width:1300px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Styling for whole site*/
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    max-width: 100%;
+}
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+  
+.section-title {
+    text-align: center;
+    padding: 10px 0 10px;
+    text-transform: uppercase;
+    background: var(--primary-color);
+    font-size: 40px;
+    letter-spacing: 100px;
+    color:var(--medium-gray-color);
+}
+
+/*-------------------*/
+.section-title::after {
+    content: '';
+    display: block;
+    width: 600px;
+    height: 5px;
+    margin-top: 10px auto 20px;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Navbar Styling */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color); 
+  backdrop-filter: blur(px);
+  box-shadow: 10px 10px 50px #f3961c;
+  transition: top 0.4s ease;
+}
+
+header.hide {
+  transform: translateY(-100%);
+}
+
+header .navbar {
+    display: flex;
+    padding: 10px;
+    padding-right: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .nav-logo .logo-text {
+    color:var(--white-color);
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-waight-semibold);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 30px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition:0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color:var(--primary-color);
+    background:var(--secondary-color);
+}
+    
+.navbar :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
+    
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%); 
+}
+
+
+body {
+  position: relative;
+  color: white;
+  min-height: 100vh;
+}
+
+
+
+
+
+/* ------------------------Art Section----------------------- */
+.art-section {
+  padding: 100px 0 200px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.art-section-content {
+  max-width: 600px;
+}
+
+.art-details .title {
+  font-size: 20rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+  margin-top: 100px;
+}
+
+
+.art-button {
+  display: flex;
+  justify-content: center;
+  margin-top: -90px;
+  margin-right: -90px;
+  flex-wrap: center;
+  gap: 50px;
+}
+.art-button .Drawing {
+  padding: 10px 50px;
+  background:var(--secondary-color);            
+  color: var(--primary-color);
+  border-radius: 20px;
+  border: 2px solid var(--secondary-color); 
+  text-decoration: none;
+  font-weight: var(--font-waight-semibold);
+  transition: 0.3s;
+}
+
+.art-button .Drawing:hover {
+  background: transparent;      
+  color: var(--white-color);                           
+  border: 2px solid var(--secondary-color);
+}
+
+
+
+
+
+/*----------------------------profile----------------------*/
+.profile {
+    display: flex;
+    align-items: center; /* vertically align */
+    padding: 20px;
+    gap: 10px; /* spacing between profile and image */
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    gap: 15px;
+    border:1px solid #a96001;
+    box-shadow: 1px 1px 50px #f3961c;
+    border-radius: 25px;
+    background: var(--primary-color);
+    width: fit-content;
+    height: 70px;
+
+}
+
+/*-------------------------Painting----------------------------*/
+
+.painting-section {
+    background:transparent;
+    backdrop-filter: blur(20px);
+    padding-bottom: 100px;
+  
+   
+}
+
+.painting-section .painting-list .name {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Circle profile picture */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+/* painting view */
+.paragraph {
+    color: #000;
+    font-size: 20px;
+}
+
+.painting-image-wrapper .paragraph{
+    text-align: justify;
+    margin-right: 20px;
+}
+
+
+.painting-image {
+    width: 900px;  
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 5px solid var(--secondary-color);
+}
+
+.painting-page .painting-image-wrapper {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--medium-gray-color); 
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.2);
+  
+    text-align: left;
+}
+
+
+.painting-image-wrapper .painting-image {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+
+
+/*------------------------------------------------------*/
+
+
+
+
+/*--------------------------Sculpture-------------------------*/
+.sculpture-section {
+    background: var(--primary-color);
+    border-top: 3px solid var(--secondary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    padding-bottom: 50px;
+}
+
+
+
+/*--------------------------Film-------------------------*/
+
+.film-section {
+     padding-bottom: 100px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+}
+
+
+
+/*-------------------------Drawing-------------------------*/
+.drawing-section {
+    padding-bottom: 100px;
+    background: var(--primary-color);
+    border-top: 5px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+
+
+
+/*----------------Student Section Styling----------------- */
+
+.Students-section {
+    background: var(--primary-color);
+    border-bottom: 7px solid var(--secondary-color);
+    border-top: 6px solid var(--secondary-color);
+    padding-bottom: 20px;
+    height: 750px;
+}
+.Students-section .section-title {
+    color: var(--white-color);
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 30px;
+    display: block;        /* full width = centered at top */
+    width: 100%;           /* ensures full horizontal alignment */
+    margin: 0 auto 20px;   /* centers and adds spacing below */
+}
+
+.Students-section .section-title::after {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 5px;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+    margin: 1px auto 0 auto;  /* centers underline */
+}
+
+.Students-section .slider-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 30px;
+    animation: spin 5s infinite linear;
+}
+
+.Students-section .slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px ;
+
+
+}
+
+.Students-section .card-list .card-item {
+    color: var(--dark-color);
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border-radius:18px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.Students-section .card-list .card-item .card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid var(--secondary-color);
+    padding: 4px;
+
+}
+.Students-section .card-list .card-item .name {
+    font-size: 15px;
+    font-weight: var(--font-waight-semibold);
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+
+.Students-section .card-list .card-item .view-work-btn {
+    padding: 10px 26px;
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: var(--font-waight-semibold);
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.Students-section .card-list .card-item .view-work-btn:hover {
+    background: transparent;
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #00bfff; 
+}
+
+.swiper-pagination-bullet {
+  background: #FFFF !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FFFF !important;
+  opacity: 1;
+}
+
+.student-art-button {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically (if needed) */
+  flex-wrap: wrap;         /* allows wrapping if needed */
+  gap: 100px;               /* spacing between buttons */
+  margin-top: 70px;
+  margin-right: 10px;
+}
+
+     
+  .student-art-button .Drawing-art {
+  padding: 5px 70px;
+  background:var(--secondary-color);          
+  color: var(--primary-color);
+  font-size: 25px;
+  border-radius: 25px;
+  border: 2px solid var(--secondary-color); 
+  text-decoration: none;
+  font-weight: var(--font-waight-bold);
+  transition: 0.3s;
+}
+
+.student-art-button .Drawing-art:hover {
+  background: transparent;      
+  color: var(--white-color);                          
+  border: 2px solid var(--secondary-color); 
+}
+
+.film-section .section-title {
+    color: var(--medium-gray-color);
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 70px;
+    display: block;        /* full width = centered at top */
+    width: 100%;         /* ensures full horizontal alignment */
+    margin: 0 auto 20px;   /* centers and adds spacing below */
+}
+
+.film-section .section-title::after {
+     content: '';
+    display: block;
+    width: 300px;
+    height: 5px;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+    margin: 1px auto auto auto;
+}
+
+.painting-page .slider-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.painting-page .slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px ;
+    padding-bottom: 400px;
+
+}
+
+.painting-page .card-list {
+    margin-top: 20px;
+    margin-bottom: -60px;
+}
+
+
+.painting-page .card-list .card-item .card-image {
+    width: 400px;
+    height: 300px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    border: 4px solid var(--secondary-color);
+    padding: 4px;
+
+}
+.painting-page .card-list .card-item .name {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-waight-bold);
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+
+.painting-page .card-list .card-item .view-work-btn {
+    padding: 10px 26px;
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: var(--font-waight-semibold);
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.painting-page .card-list .card-item .view-work-btn:hover {
+    background: transparent;
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.painting-page .slider-content {
+background-color: var(--medium-gray-color);
+margin-right: 30px;
+margin-left: 30px;
+border-radius: 10px;
+
+}
+
+
+
+
+/* Responsive media query code for max-width 1250px 
+@media (min-width:915px) and (max-width:1250px) {
+    
+    .section-title {
+        letter-spacing: 100px;
+        font-size: 200px;
+        
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive media query code for max-width 900px */
+@media screen and (max-width:915px) {
+    :root {   
+    --font-size-m:1rem;
+    --font-size-l:1.3rem;
+    --font-size-xl:5rem;
+    --font-size-xxl:1.8rem;
+    }
+
+    .section-title {
+        letter-spacing: 10px;
+        font-size: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-title::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 5px;
+    margin-top: 10px auto 20px;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+    body.show-mobile-menu header::before {
+        content: '';
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar #menu-close-button, .navbar #menu-open-button {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        color: #ccc;
+        right: 30px;
+        top: 30px;    
+    }
+
+    .navbar #menu-open-button{
+        color: var(--white-color);
+        position: absolute;
+        right:20px;
+    } 
+    
+    .navbar .nav-menu {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--primary-color);
+        transition: left 0.2s ease;
+    
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0px;
+    }
+        
+
+  .navbar .nav-menu .nav-link {
+    color: var(--white-color);
+    display: block;
+    margin-top: 17px ;
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-waight-medium);
+     } 
+     
+    .navbar .nav-menu .nav-link:hover {
+  color: var(--white-color);
+       }
+    
+       .hero-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 170px 20px 20px 30px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .hero-section .hero-details :is(.subtitle, .description), .about-section .about-details{
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .button a {
+        justify-content: center;
+
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+    .about-section .about-content {
+        gap: 1px;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .about-section .about-details {
+        margin: 0;
+        max-width: 100%;  
+    }  
+
+    /*-------------Art section--------------*/
+
+    .art-section {
+        height: 850px;
+        overflow: hidden;
+    }
+    
+     .art-details .title {
+     font-size: 10rem; 
+     font-weight: bold;
+     margin-bottom: 20px;
+     margin-top: 100px;
+   }   
+
+
+       .art-button {
+       display: flex;
+       flex-wrap: wrap-reverse;
+       margin-top: -50px;
+       margin-right: 10px;
+       flex-wrap: center;
+       gap: 15px;
+        }
+
+     
+  .art-button .Drawing {
+  padding: 5px 100px;
+  background:var(--secondary-color);          
+  color: var(--primary-color);
+  font-size: 20px;
+  border-radius: 20px;
+  border: 2px solid var(--secondary-color); 
+  text-decoration: none;
+  font-weight: var(--font-waight-bold);
+  transition: 0.3s;
+}
+
+.art-button .Drawing:hover {
+  background: transparent;      
+  color: var(--white-color);                          
+  border: 2px solid var(--secondary-color); 
+}
+
+
+
+/*----profile-----*/
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    gap: 15px;
+    border:1px solid #a96001;
+    box-shadow: 1px 1px 50px #f3961c;
+    
+    border-radius: 25px;
+    background: var(--primary-color);
+    width: fit-content;
+    height: 5px;
+
+}
+
+.painting-section .painting-list .name {
+    margin: 0;
+    font-size: 15px;
+}
+
+.name {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Circle profile picture */
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary-color);
+}
+
+/* painting view */
+.painting-image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+  .painting-image-wrapper .painting-image {
+    width: 90%; /* shrink on small screens */
+  }
+
+  .paragraph {
+    font-size: 12px;
+    margin-top: -30px;
+      
+  }
+
+
+/*---------------------student section-----------------*/
+.Students-section {
+    height: 850px;
+    border-top:3px solid var(--secondary-color) ;
+    overflow: hidden;
+}
+
+/*Student Section Styling */
+
+.Students-section {
+    background: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 20px;
+}
+.Students-section .section-title {
+    color: var(--white-color);
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.Students-section .section-title::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 5px;
+    margin-top: 10px auto 20px;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+    margin-left: auto;
+    margin-top: 2px;
+    margin-right: auto;
+}
+
+.Students-section .slider-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    animation: spin 5s infinite linear;
+}
+
+.Students-section .slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px ;
+
+
+}
+
+.Students-section .card-list .card-item {
+    color: var(--dark-color);
+    user-select: none;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.Students-section .card-list .card-item .card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid var(--secondary-color);
+    padding: 4px;
+
+}
+.Students-section .card-list .card-item .name {
+    font-size:15px;
+    font-weight: var(--font-waight-n);
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+
+.Students-section .card-list .card-item .view-work-btn {
+    padding: 10px 50px;
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: var(--font-waight-bold);
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.Students-section .card-list .card-item .view-work-btn:hover {
+    background: transparent;
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #00bfff; 
+}
+
+.swiper-pagination-bullet {
+  background: #FFFF !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FFFF !important;
+  opacity: 1;
+}
+
+
+.student-art-button {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically (if needed) */
+  flex-wrap: wrap;         /* allows wrapping if needed */
+  gap: 15px;               /* spacing between buttons */
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+     
+  .student-art-button .Drawing-art {
+  padding: 5px 100px;
+  background:var(--secondary-color);          
+  color: var(--primary-color);
+  font-size: 20px;
+  border-radius: 20px;
+  border: 2px solid var(--secondary-color); 
+  text-decoration: none;
+  font-weight: var(--font-waight-bold);
+  transition: 0.3s;
+}
+
+.student-art-button .Drawing-art:hover {
+  background: transparent;      
+  color: var(--white-color);                          
+  border: 2px solid var(--secondary-color); 
+}
+
+/*--------------------------Painting-------------------------*/
+
+
+/*--------------------------Sculpture-------------------------*/
+.sculpture-section {
+    background: var(--primary-color);
+    border-top: 3px solid var(--secondary-color);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+
+
+/*--------------------------Film-------------------------*/
+
+.film-section {
+    padding-bottom: 100px;
+}
+
+.film-section .section-title {
+font-size: 40px;
+letter-spacing: 20px;
+
+}
+
+.film-section .section-title::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    margin-top: 10px auto 20px;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+
+
+
+/*-------------------------Drawing-------------------------*/
+.drawing-section {
+    padding-bottom: 50px;
+    background: var(--primary-color);
+    border-top: 5px solid var(--secondary-color);
+    border-bottom: 10px solid var(--secondary-color);
+}
+
+
+
+
+
+.caro-paragraph {
+    margin-top: 20px;
+    color: black;
+    font-size: 15px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;          /* Full width on mobile */
+    max-width: 350px;     /* Limit size on bigger screens */
+    overflow: hidden;
+    margin: 1px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 1.5s linear;
+}
+
+.carousel-slide img {
+    width: 100%;          /* responsive */
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev-btn { left: 5px; }
+.next-btn { right: 5px; }
+
+
+
+
+
+
+
+
+
+}
